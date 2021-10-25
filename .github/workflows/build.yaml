@@ -1,7 +1,11 @@
-name: ci
+name: build
 
 on:
   push:
+
+defaults:
+  run:
+    working-directory: images/sshd
 
 jobs:
   buildx:

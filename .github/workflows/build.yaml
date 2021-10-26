@@ -33,4 +33,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: build
         run: |
-          docker buildx build --platform linux/arm64 --tag ghcr.io/${{ github.repository }} --push .
+          docker buildx build --platform linux/arm64,linux/amd64 --tag ghcr.io/${{ github.repository }} --push .

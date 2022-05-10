@@ -35,6 +35,6 @@ jobs:
       - name: build
         run: |
           docker buildx build --platform linux/arm64,linux/amd64 --tag ghcr.io/${{ github.repository }} \
-          --export-to=type=gha,mode=max\
-          --import-from=type=gha \
-          --push .
+            --export-to=type=gha,mode=max \
+            --import-from=type=gha \
+            --push .
